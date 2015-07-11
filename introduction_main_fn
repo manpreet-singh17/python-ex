@@ -1,0 +1,9 @@
+#!/usr/bin/evs pyhton
+import sys #very standard module
+def main(): #main fn for all code
+    print "hello ", sys.argv[1],sys.argv[2],sys.argv[3] #at argv[0] there is script so argv[1],argv[2] so on..!
+    print sys.argv[4]
+    print len(sys.argv)
+
+if __name__ == '__main__': #stndrd wy to call main fn
+    main()
