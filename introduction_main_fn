@@ -7,3 +7,44 @@ def main(): #main fn for all code
 
 if __name__ == '__main__': #stndrd wy to call main fn
     main()
+
+**********************************************************************************************************
+#remove adjacent numbers from list and generate new list with all uniwue numbers
+
+#input list
+num = [1, 2, 2, 3, 3, 4, 5, 6]
+
+#empty list for final result
+result = []
+
+#this fn iterate the list and makes a new list with unique numbers
+def rem_adjacent(list):
+    for f in list:
+        print result
+        if len(result) == 0 or f != result[-1]:
+            result.append(f)
+    return result
+
+result1 = rem_adjacent(num) #fn calling and assigning result in result1
+print result1
+
+*************************************************************************************************************
+
+#repeat s for 3 times and add exclaimation sign if result is true
+
+def user_defined(s,result):
+    """ this function repeats the s for
+         3 times and add an exclamamtion sign if exclaim is TRUE"""
+    repeat = s*3 #asign s 3 times in repeat
+
+    if result:
+        repeat =  repeat + '!!!'
+    return repeat
+
+#main function for calling user_defined fn
+def main():
+    print user_defined('abc ',False)
+    print user_defined('abc ',True)
+
+if __name__ == '__main__': #standard way to call main function
+    main()
