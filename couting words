@@ -1,0 +1,55 @@
+def create_file():
+    f = open('peeta.txt', 'a')
+    input = raw_input("Enter text: ")
+    f.write(input)
+    f.close()
+
+def read_file():
+    f = open("peeta.txt", 'r')
+    output = f.read()
+    print output
+    f.close()
+
+final_output = []
+key = []
+dict = {}
+def print_count():
+    f = open('peeta.txt', 'r')
+    output = f.read()
+    final_output = output.lower().split()
+    for word in final_output:
+        key = dict.keys()
+        if word in key:
+            dict[word] += 1
+        else:
+            dict[word] = 1
+    f.close()
+    print dict
+    print 'SORTED DICTIONRY: ', sorted(dict.items())
+
+def top_count():
+    print_count()
+    #print dict
+    result = []
+    item = dict.items()
+    #print item
+    for z in item:
+        #print z
+        result.append(z)
+        #print result
+    final_result = sorted(result,reverse=True,key=last)
+    print 'TOP 5 IS:', final_result[:5]
+
+def last(l):
+    return l[-1]
+
+operation = raw_input("Enter mode for your file w/r/pc/top: ")
+
+if operation == 'w':
+    create_file()
+elif operation == 'r':
+    read_file()
+elif operation == 'pc':
+    print_count()
+elif operation == 'top':
+    top_count()
